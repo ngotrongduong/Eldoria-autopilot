@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Eldoria Autopilot",
+  "version": "1.0.0",
+  "description": "Chạy autopilot Eldoria (pxhero.net) trong tab game; tự nạp bản mới nhất mỗi phút, không cần cài lại.",
+  "permissions": ["scripting", "storage", "alarms", "tabs"],
+  "host_permissions": [
+    "https://pxhero.net/*",
+    "http://127.0.0.1:8765/*",
+    "https://raw.githubusercontent.com/*",
+    "https://cdn.jsdelivr.net/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Eldoria Autopilot" }
+}
