@@ -6,7 +6,7 @@
 const PAGE = 'https://pxhero.net/scene/play.html';
 const BRIDGE = 'http://127.0.0.1:8765';
 // bản phát hành trên GitHub (repo công khai) — máy khác tự cập nhật từ đây; máy của Claude thường mới hơn qua thư mục/cầu nối
-const GH = 'https://raw.githubusercontent.com/ngotrongduong/eldoria-autopilot/main/bundle.json';
+const GH = 'https://raw.githubusercontent.com/ngotrongduong/Eldoria-autopilot/main/bundle.json';
 const DEF = { enabled: true, source: 'auto', url: GH };
 
 const cfg = async () => Object.assign({}, DEF, await chrome.storage.local.get(Object.keys(DEF)));
