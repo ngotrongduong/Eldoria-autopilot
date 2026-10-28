@@ -21,6 +21,10 @@ Bấm biểu tượng extension để xem trạng thái (`AP.report`), bật/t�
 - Nguồn bản mới: GitHub (raw, khoảng 5 phút cache), cầu nối `http://127.0.0.1:8765` và file trong thư mục này. Extension lấy bản có số phiên bản (`v`) lớn nhất trong 3 nguồn. Claude đăng bản mới bằng `tools/publish_ext.ps1`.
 - Đổi background/popup/manifest thì máy khác phải tải lại thư mục (giới hạn của extension cài unpacked). Code autopilot thì tự cập nhật hoàn toàn.
 
+## Báo lỗi
+
+Autopilot tự ghi sự cố: kẹt, lỗi, một việc lặp đi lặp lại, bước truyện đứng yên quá 40 phút. Khi có sự cố, nút ở góc trái dưới tab game chuyển đỏ: **⚠ Báo lỗi autopilot (N)**. Bấm nút để mở trang GitHub "New issue" đã điền sẵn, viết thêm mô tả nếu muốn, rồi bấm **Submit** (cần đăng nhập GitHub). Lúc không có sự cố, nút xám "Báo lỗi" vẫn bấm được để gửi nhật ký gần nhất. Báo lỗi là công khai, tên người chơi khác đã được xoá. Claude đọc các issue có nhãn `feedback` để vá lỗi.
+
 ## Cầu nối cho Claude theo dõi (tuỳ chọn)
 
 `node "C:\game auto\tools\ext_bridge.js"`: extension gửi `AP.report()` mỗi phút vào `C:\game auto\ext_status.json`. Ghi `{"cmd":"reload"}` (hoặc `"start"` / `"stop"`) vào `C:\game auto\ext_cmd.json` để ra lệnh cho tab.
